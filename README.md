@@ -36,6 +36,8 @@ python3.8 -m venv venv
 ```shell
 # Для Windows:
 source venv/Scripts/activate
+или
+venv/Scripts/activate
 
 # Для Linux и macOS:
 source venv/bin/activate 
