@@ -33,3 +33,11 @@ python.exe -m pip install --upgrade pip
 
 pip install -r requirements.txt
 ```
+==========================================================================
+
+## Python версия 3.7-3.9
+Библиотеки:
+```shell
+matplotlib==3.5.3
+requests==2.31.0
+```
