@@ -22,7 +22,7 @@ class ScaleBar(Frame):
         self.candles_close = []
 
     def initUI(self):
-        self.master.title("Шкала с ползунком")
+        self.master.title("Шкала с ползунком ")
         self.style = Style()
         self.style.theme_use("default")
         self.pack()
