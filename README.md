@@ -22,3 +22,14 @@ git clone https://github.com/s9515411757/kline.git
 ```shell
 https://github.com/s9515411757/kline.git
 ```
+3) В PyCharm по умолчанию создается виртуальное окружение, если оно у вас не создалось, то следует воспользоваться командой:
+```shell
+git clone https://github.com/s9515411757/kline.git
+```
+
+4) Устанавливаем библиотеки, перед установкой следует обновить PIP:
+```shell
+python.exe -m pip install --upgrade pip
+
+pip install -r requirements.txt
+```
