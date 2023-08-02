@@ -32,8 +32,16 @@ python -m venv venv
 ```shell
 python3.8 -m venv venv
 ```
+4) Запускаем виртуальное окружение. Если venv вашего проекта деактивировано, активируйте его, введите команду:
+```shell
+# Для Windows:
+source venv/Scripts/activate
 
-4) Устанавливаем библиотеки, перед установкой следует обновить PIP:
+# Для Linux и macOS:
+source venv/bin/activate 
+```
+
+5) Устанавливаем библиотеки, перед установкой следует обновить PIP:
 ```shell
 python.exe -m pip install --upgrade pip
 
