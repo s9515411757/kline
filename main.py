@@ -7,7 +7,7 @@ import datetime as dt
 import math
 
 
-class Scale_bar(Frame):
+class ScaleBar(Frame):
     def __init__(self):
         super().__init__()
         self.trade_time = []
@@ -259,7 +259,6 @@ class Scale_bar(Frame):
                 self.candles_close.append(float(result[i][4]))
         print(result)
 
-
     def build_plot(self, val):
 
         if self.graph_type != 6:
@@ -311,6 +310,8 @@ class Scale_bar(Frame):
         self.var.set(v)
         self.build_plot(val)
 
-root = tkinter.Tk()
-scale_bar = Scale_bar()
-root.mainloop()
+
+if __name__ == '__main__':
+    root = tkinter.Tk()
+    scale_bar = ScaleBar()
+    root.mainloop()
