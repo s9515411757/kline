@@ -97,12 +97,14 @@ class ScaleBar(Frame):
 
         iter = self.kline % z
         for k in range(iter):
-            start_point = k*z
-            if self.kline - k*z < z:
-                end_point = self.kline-1
+            end_point = self.kline-k*z-1
+            print(end_point)
+            if end_point-z < 0:
+                start_point = 0
             else:
-                end_point = (k+1)*z
-            if start_point > end_point:
+                start_point = end_point-z
+            print(start_point)
+            if start_point < 0 or end_point <= 0:
                 break
             time_start_point = self.trade_time[start_point]
             time_end_point = self.trade_time[end_point]
@@ -132,9 +134,10 @@ class ScaleBar(Frame):
                 for k in max_price_arr:
                     if ((koeff+1)*t>=k and (1-koeff)*t<=k) and t != k:
                         i += 1
-                if i >= 2:
+                if i > 2:
                     plt.hlines(t, time_start_point, time_end_point, colors='g')
                     dict_max.update({t: [i, time_start_point, time_end_point]})
+                    print('true_min')
                 i = 0
 
             dict_min = {}
@@ -142,9 +145,10 @@ class ScaleBar(Frame):
                 for k in min_price_arr:
                     if ((koeff+1)*t>=k and (1-koeff)*t<=k) and t != k:
                         i += 1
-                if i >= 2:
+                if i > 2:
                     dict_min.update({t: [i, time_start_point, time_end_point]})
                     plt.hlines(t, time_start_point, time_end_point, colors='r')
+                    print('true_max')
                 i = 0
             max_price_arr = []
             min_price_arr = []
